@@ -3,12 +3,9 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { StripeModule } from './stripe/stripe.module';
-import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ConfigModule.forRoot(),
-    StripeModule,
-    UserModule],
+  imports: [StripeModule, UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
