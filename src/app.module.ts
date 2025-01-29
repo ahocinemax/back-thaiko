@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { StripeModule } from './stripe/stripe.module';
 import { ProductsModule } from './product/products.module';
+import { SubCategoriesModule } from './subcategories/subcategories.module';
 
 @Module({
-  imports: [StripeModule, UserModule, ProductsModule],
+  imports: [StripeModule, UserModule, ProductsModule, SubCategoriesModule],
   controllers: [AppController],
   providers: [AppService],
 })
