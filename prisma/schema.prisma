@@ -23,8 +23,8 @@ model Product {
   imageUrl      String
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
-  subCategoryId String?
-  subCategory   SubCategory? @relation(fields: [subCategoryId], references: [id])
+  subCategoryId String
+  subCategory   SubCategory @relation(fields: [subCategoryId], references: [id])
   orders        Order[]
 }
 model SubCategory {
